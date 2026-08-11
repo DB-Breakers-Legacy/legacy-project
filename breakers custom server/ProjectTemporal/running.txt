@@ -1,0 +1,13 @@
+python manage.py runserver 80
+
+python manage.py migrate
+
+daphne -e ssl:443:privateKey=test.key:certKey=test.crt breadbreaker.asgi:application OLD, NO SSLKEYLOG
+
+hypercorn --bind 127.0.0.1:443 --certfile test.crt --keyfile test.key breadbreaker.asgi:application --keep-alive 10
+
+hypercorn workers with -w 4 USED to work but now crashes for some reason, fix later
+
+
+CURL TEST
+curl -http2 --insecure -X POST https://127.0.0.1/LALALALALA/000000/api/sys/get_env_v3

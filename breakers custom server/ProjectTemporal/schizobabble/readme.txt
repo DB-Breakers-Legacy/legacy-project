@@ -1,0 +1,1 @@
+schizobabble is early written investigations into UDP packets and stuff, turn into actual human readable documentation later

@@ -1,0 +1,70 @@
+UDP header first 4 bytes 00000003
+
+000000 - sequence header
+
+03 - packet type
+
+1 - plain udp
+2 - connection
+3 - data
+4 - ACK
+5 - retry
+6 - end ACK
+7 - end connection
+
+
+client start lobby2pcap 34.135.234.120
+
+00000002 778d0e05fc2341ac9dfd4d85e7e841fc
+status 		IV key
+
+server 00000004 ACK
+
+client - 00000003 febedeef000000740001 778d0e05fc2341ac9dfd4d85e7e841fc 000000319448107e9ceb9dfaddcba47f4dc4fa1eccca6ae35e3fff4ca1580cce142eabb56fd57ae182aee7b6dbbf2ea6ee36bf0658a63c01bf6c686797d832bd184b66577097f29cfa0c3c972c16afdefcd81c8b43221413b3db9b9f84619e0002a3be0f
+
+00000003 - RUDP header
+
+febedeef000000740001 - diarkis header
+
+version: fe -> 254
+command id: bede -> 48862?
+status: ef -> 239
+payload length: 00000074 -> 116 bytes
+
+00000031 - session ID?
+
+encrypted == 9448107e9ceb9dfaddcba47f4dc4fa1eccca6ae35e3fff4ca1580cce142eabb56fd57ae182aee7b6dbbf2ea6ee36bf0658a63c01bf6c686797d832bd184b66577097f29cfa0c3c972c16afdefcd81c8b43221413b3db9b9f84619e0002a3be0f
+
+first 32 bytes == hash
+
+next 16 bytes == IV
+
+rest is ciphertext
+
+decrypted:
+b'As\xb2\xa3\x9c\xf9#\x1b\x9fS\x99\xe8\t\xb4\x9a1\xe2\xabqO\xa9B\x08\xd8z\xfe\x80\xfc*\x88\xd3\xdby\xfa\x81\x87\xbe*\xbc\x1a\x08\xee6\xfc\x90\xb0\xd1\x15.0.4:53430\x00\x00\x00\x13192.168.1.169:53430\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+
+\x00\x00\x00\x13 192.168.1.169:53430 - length prefix, 13 hex == 19 decimal, IP addr + port
+\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00 - padding
+
+
+client - 01000003 febedeef010000440131 778d0e05fc2341ac9dfd4d85e7e841fc 00000000 ebd02d3b954de90e5bfa493f56f2b9cedd1c276cf4450efbbacc582799633ccc5fb462b43e650474caf3a32c610c8e37
+
+10000003 - RUDP header, 2nd transmit
+
+febedeef010000440131 - diarkis header
+
+
+server response:
+00000003febedeef000000440001010000001b - header, encrypted == 3b43c6c7390766bd3f405325f0f2ed037246e1563cf04f3f8437afc7fa96356cc9989b1cde5e40a4f213e20550f9a6d85afb133e50f58bb8051811a6e0cbb35f
+
+decrypted
+b'\xaf\x84\x98\x1c\x0cV\xe1_\x18Du\x98XrO[\xd0\xe0f"\xdd\xfc:\xfe7\xdbf\xd3\x17\xc1+E\x95\xb7\xd7kVx\ri-\xb9\xa3\xd5~\x0eT\xda23.22:53431\x00\x00\x00\x00\x00'
+
+server response 2:
+
+b'O\x93.-\xafG\xdf3\x99z!\x12\xef\xdc<\x0b)Z\xeeF\xcc\xb7?\xdf\xa1\x1c\xda|\x93\xea-\xdc\x80\xb5\x95\x93\xc7F\x80\xd3\xcb|\xc6W\xd6"\x83Vbc.googleusercontent.com:7099\x00\x00\x00'
+
+server response 3:
+
+b'?\x81+\xa2\xf5G\xba+H\x9a\xa7\xb7\xd9c\x04\xb3\xe2M \xe8\xb3\x02\xfd-(\x16\x1e*]b\xc3\x85\xd4*\x99\xb6\xd3N\xcb\x1b\xf1\x91z\xfa{\x964\x86.bc.googleusercontent.com:7099\x00\x00'

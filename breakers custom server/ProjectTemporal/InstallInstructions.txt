@@ -1,0 +1,47 @@
+NOTCE: overwrite might not be neccessary anymore, h2.py seems to have been updated, remove this once confirmed
+OVERWRITE _send_data function IN:
+
+Users/user/AppData/Local/Programs/Python/Python311/Lib/site-packages/hypercorn/protocol/h2.py
+
+h2.py:
+
+    async def _send_data(self, stream_id: int) -> None:
+        try:
+            chunk_size = min(
+                self.connection.local_flow_control_window(stream_id),
+                self.connection.max_outbound_frame_size,
+            )
+            chunk_size = max(0, chunk_size)
+            data = await self.stream_buffers[stream_id].pop(chunk_size)
+            if data:
+                self.connection.send_data(stream_id, data) #BREADED - todo: check if large data is fine
+                await self._flush()
+            else:
+                self.priority.block(stream_id)
+
+            if self.stream_buffers[stream_id].complete:
+                self.connection.end_stream(stream_id) #breaded
+                #await self._flush()
+                #BREADED
+                #pingBytes = await getRandomBytes() 
+                #self.connection.ping(pingBytes)
+                #
+                await self._flush()
+                del self.stream_buffers[stream_id]
+                self.priority.remove_stream(stream_id)
+				
+	
+
+And install these python/django libraries:
+
+pip install channels
+pip install Django
+pip install django-extensions
+pip install django-cors-headers
+pip install msgpack
+pip install hypercorn
+pip install whitenoise
+pip install ipinfo_django
+pip install django-request-logging
+pip install twisted
+pip install pycryptodome

@@ -1,0 +1,32 @@
+POST /xxxxx/000000/api/sys/get_env_v3
+{'User-Agent': 'Valve/Steam HTTP Client 1.0 (1276760)', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': '127.0.0.1:8443', 'Accept': 'text/html,*/*;q=0.9', 'Accept-Encoding': 'gzip,identity,*;q=0', 'Accept-Charset': 'ISO-8859-1,utf-8,*;q=0.7', 'Content-Length': '51'}
+b'\x92\x84\xa7titleCd\xa6025348\xa6userId\xa0\xa7session\xa0\xa8platform\x03\x94\xcd\x01\x00\xa0\x01\xa0'
+POST /xxxxx/000000/api/sys/get_env_v3 - 200
+POST /LALALALALA/000000/api/user/auth
+{'User-Agent': 'Valve/Steam HTTP Client 1.0 (1276760)', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': '127.0.0.1:8443', 'Accept': 'text/html,*/*;q=0.9', 'Accept-Encoding': 'gzip,identity,*;q=0', 'Accept-Charset': 'ISO-8859-1,utf-8,*;q=0.7', 'Content-Length': '535'}
+b'\x92\x84\xa7titleCd\xa6025348\xa6userId\xa0\xa7session\xa0\xa8platform\x03\x93\xb176561199023236506\xda\x01\xd4140000009DF8E2598B07A75D9AA55B3F010010016B0A126A180000000100000002000000029E7BD67BF40AC7A3A1FB00D9000000B200000032000000040000009AA55B3F01001001587B130058ACB8C01E2AA8C000000000C2120D6A42C2286A0100C6C806000000000095C5310A0170A2C734A63E7E8A1CCF5B68E2BEC6B0B7FFADBB36A246FD8BE5CF2C1FC6A2407968BDAB30371EF5B64970B178D4054B74B8C86EF931EB88933ED70C32C8A54725C901E046266D92CC79E292339E257BC32379C0F5B22D7A915B018C44EB196983395044AEEF1A5A34B26A64B05A437EAAAA983A54713662BAF760\x00'
+POST /LALALALALA/000000/api/user/auth - 200
+POST /LALALALALA/000000/api/user/get_country
+{'User-Agent': 'Valve/Steam HTTP Client 1.0 (1276760)', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': '127.0.0.1:8443', 'Accept': 'text/html,*/*;q=0.9', 'Accept-Encoding': 'gzip,identity,*;q=0', 'Accept-Charset': 'ISO-8859-1,utf-8,*;q=0.7', 'Content-Length': '68'}
+b'\x92\x84\xa7titleCd\xa6025348\xa6userId\xaa1062970778\xa7session\xad6973b55fd3695\xa8platform\x03\x90'
+POST /LALALALALA/000000/api/user/get_country - 200
+POST /LALALALALA/000000/api/user/get_tracking_num
+{'User-Agent': 'Valve/Steam HTTP Client 1.0 (1276760)', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': '127.0.0.1:8443', 'Accept': 'text/html,*/*;q=0.9', 'Accept-Encoding': 'gzip,identity,*;q=0', 'Accept-Charset': 'ISO-8859-1,utf-8,*;q=0.7', 'Content-Length': '68'}
+b'\x92\x84\xa7titleCd\xa6025348\xa6userId\xaa1062970778\xa7session\xad6973b55fd3696\xa8platform\x03\x90'
+POST /LALALALALA/000000/api/user/get_tracking_num - 200
+POST /dbtb-prd/LALALALALA/025348/api/close/get_close_info
+{'User-Agent': 'Valve/Steam HTTP Client 1.0 (1276760)', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': '127.0.0.1:8443', 'Accept': 'text/html,*/*;q=0.9', 'Accept-Encoding': 'gzip,identity,*;q=0', 'Accept-Charset': 'ISO-8859-1,utf-8,*;q=0.7', 'Content-Length': '85'}
+b'\x92\x85\xa7titleCd\xa6025348\xa6userId\xaa1062970778\xa7session\xad6973b55fd3697\xa8platform\x03\xa7version\xa509.01\x91\xa2en'
+POST /dbtb-prd/LALALALALA/025348/api/close/get_close_info - 200
+POST /dbtb-prd/LALALALALA/025348/api/user/create_user_info
+{'User-Agent': 'Valve/Steam HTTP Client 1.0 (1276760)', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': '127.0.0.1:8443', 'Accept': 'text/html,*/*;q=0.9', 'Accept-Encoding': 'gzip,identity,*;q=0', 'Accept-Charset': 'ISO-8859-1,utf-8,*;q=0.7', 'Content-Length': '106'}
+b'\x92\x85\xa7titleCd\xa6025348\xa6userId\xaa1062970778\xa7session\xad6973b55fd3698\xa8platform\x03\xa7version\xa509.01\x93\xa2US\xa2en\xb176561199023236506'
+POST /dbtb-prd/LALALALALA/025348/api/user/create_user_info - 200
+POST /dbtb-prd/LALALALALA/025348/api/adjustment_data_manage/read
+{'User-Agent': 'Valve/Steam HTTP Client 1.0 (1276760)', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': '127.0.0.1:8443', 'Accept': 'text/html,*/*;q=0.9', 'Accept-Encoding': 'gzip,identity,*;q=0', 'Accept-Charset': 'ISO-8859-1,utf-8,*;q=0.7', 'Content-Length': '82'}
+b'\x92\x85\xa7titleCd\xa6025348\xa6userId\xaa1062970778\xa7session\xad6973b55fd3699\xa8platform\x03\xa7version\xa509.01\x90'
+POST /dbtb-prd/LALALALALA/025348/api/adjustment_data_manage/read - 200
+POST /dbtb-prd/LALALALALA/025348/api/close/get_close_info
+{'User-Agent': 'Valve/Steam HTTP Client 1.0 (1276760)', 'Content-Type': 'application/x-www-form-urlencoded', 'Host': '127.0.0.1:8443', 'Accept': 'text/html,*/*;q=0.9', 'Accept-Encoding': 'gzip,identity,*;q=0', 'Accept-Charset': 'ISO-8859-1,utf-8,*;q=0.7', 'Content-Length': '85'}
+b'\x92\x85\xa7titleCd\xa6025348\xa6userId\xaa1062970778\xa7session\xad6973b55fd369a\xa8platform\x03\xa7version\xa509.01\x91\xa2en'
+POST /dbtb-prd/LALALALALA/025348/api/close/get_close_info - 200

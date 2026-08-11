@@ -1,0 +1,24 @@
+Public IP: 86.165.23.22
+
+1. IVACK
+
+2. C - > S Client addr 
+
+	b'.0.4:53430\x00\x00\x00\x13192.168.1.169:53430\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+	
+	HEARTBEAT
+	
+3. S - > C Truncated Public IP + Port
+
+	b'23.22:53431\x00\x00\x00\x00\x00'
+
+4. S - > C DNS server 1? 2d - 45
+	
+	b'bc.googleusercontent.com:7099\x00\x00\x00'
+
+5. S - > C DNS server 2? 2e - 46
+
+	b'.bc.googleusercontent.com:7099\x00\x00'
+	
+	
+	

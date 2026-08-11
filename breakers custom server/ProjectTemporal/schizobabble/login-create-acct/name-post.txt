@@ -1,0 +1,13 @@
+====== checkNgName ======
+------ unpacked: ------
+[{'titleCd': '025348', 'userId': '76561199023236506', 'session': '6973b55fd36a3', 'platform': 3, 'version': '09.01'}, ['asdfjkl', 'en']]
+====== end checkNgName ======
+
+
+
+====== checkNgName ======
+------ unpacked: ------
+[{'titleCd': '025348', 'userId': '76561199023236506', 'session': '6973b55fd36b3', 'platform': 3, 'version': '09.01'}, ['asdfqwer', 'en']]
+------ respondingData: ------
+[{'result': 0, 'date': '2026/05/24 00:19:31', 'version': '09.01', 'flag': '0', 'session': '6973b55fd36b4'}]
+====== end checkNgName ======
